@@ -1,0 +1,188 @@
+body {
+    margin: 0;
+    font-family:
+        -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #f5f5f5;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.upload-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.upload-box {
+    border: 2px dashed #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    background: white;
+    transition: border-color 0.3s;
+}
+
+.upload-box:hover {
+    border-color: #007bff;
+}
+
+.upload-box.active {
+    border-color: #007bff;
+    background-color: #f8f9fa;
+}
+
+.file-input {
+    display: none;
+}
+
+.upload-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.upload-button:hover {
+    background-color: #0056b3;
+}
+
+.compare-button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 20px auto;
+    display: block;
+}
+
+.compare-button:hover {
+    background-color: #1e7e34;
+}
+
+.compare-button:disabled {
+    background-color: #6c757d;
+    cursor: not-allowed;
+}
+
+.preview-section {
+    margin-top: 30px;
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.diff-content {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f8f9fa;
+    overflow-x: auto;
+    max-width: 100%;
+}
+
+.diff-added {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.diff-removed {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.diff-unchanged {
+    color: #333;
+}
+
+.download-button {
+    background-color: #17a2b8;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.download-button:hover {
+    background-color: #138496;
+}
+
+.track-changes-content {
+    font-family: monospace;
+    white-space: pre-wrap;
+    line-height: 1.6;
+}
+
+.diff-content pre {
+    font-family: 'Courier New', monospace;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    padding: 5px;
+    margin: 0;
+    max-width: 100%;
+}
+
+.track-changes-section h3,
+.diff-section h3 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.google-docs-diff {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+}
+
+.diff-line {
+    position: relative;
+}
+
+.diff-added-inline {
+    animation: highlightAdd 0.5s ease-in-out;
+}
+
+.diff-removed-inline {
+    animation: highlightRemove 0.5s ease-in-out;
+}
+
+@keyframes highlightAdd {
+    0% {
+        background-color: #b8daff;
+    }
+    100% {
+        background-color: #d4edda;
+    }
+}
+
+@keyframes highlightRemove {
+    0% {
+        background-color: #f5c6cb;
+    }
+    100% {
+        background-color: #f8d7da;
+    }
+}
